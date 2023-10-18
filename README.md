@@ -66,3 +66,50 @@ firstOrder(All[5][1][0], All[5][1][1]) = [1 + 16.0*(-I)**1.0, 1 - 16.0*(-I)**1.0
 From there, any number can be derived and any algorithim should be derivable. I am still proofing out the algorithim side.
 I have derived eulers forumal, pythagorean theroem, special relativity, lorentz contraction, and Ohms law
 
+Postulate: Complex Square Roots of Sums (Pythagorean Theroem & Eulers Law as Bibers Conjecture)
+
+Consider two complex expressions represented by:
+eurlers formula = cos(x) + i*sin(x) = 0
+if x = π^(1/2)
+
+Expression A: (sin(x)^2 + (i*cos(x))^2)^(1/2)
+Expression B: (cos(x)^2 + (i*sin(x))^2)^(1/2)
+We first square both of these expressions, resulting in:
+
+(1^2 + (i*0)^2)^(1/2) = (1 + 0)^(1/2) = 1^(1/2) = 1
+(0^2 + (i*1)^2)^(1/2) = (0 + (-1)^2)^(1/2) = (0 + 1)^(1/2) = 1^(1/2) = 1
+Now, we find the square root of the sums of the squared expressions, which is represented as:
+
+(1^2 + 1^2)^(1/2) = (1 + 1)^(1/2) = 2^(1/2) = 2^(1/2)
+
+Postulate Conclusion:
+The square root of the sum of the squared expressions A and B, as defined in this postulate, is equal to 2^(1/2)
+
+If we take 2 of these, sqaure them each and sum them together, this new values square root equals 2.
+2^(1/2) + 2^(1/2) = 2
+
+This is wrong. 
+
+def FieldEquation(): # complex zero
+  v = pi**2 + I*pi**2 
+  y = -I*pi 
+  x = -pi 
+  z = 1
+  t = pi 
+  c = E**(I*pi) 
+  m = 1 
+  
+  return ((pi**2 + I*pi**2 )**2 + (-I*pi *I**4)**(-pi **3 + (I)**(pi **2 + pi*I**(E**(I*pi) **(pi**(-I)))))**2)**(1/2)
+
+Einstien's Field Equation:
+((-I*pi)**((pi**3 - I**(pi*(pi + I**((-1)**(pi**(-I))))))**2) + pi**4*(1 + I)**2)**0.5 = 0
+((pi**2 + I*pi**2 )**2 + (-I*pi *I**4)**(-pi **3 + (I)**(pi **2 + pi*I**(E**(I*pi) **(pi**(-I)))))**2)**(1/2) = 0
+
+If we remove one pythagorean layer, or move up 1 dimension, we get:
+(-I*pi)**(-pi**3 + I**(pi*(pi + I**((-1)**(pi**(-I)))))) = -1
+(I*pi**2 )**2 + (-I*pi *I**4)**(-pi **3 + (I)**(pi **2 + pi*I**(E**(I*pi) **(pi**(-I))))) = -1
+
+This suggest the coordinate (cos(2*I*pi), cos(-2pi)) is the next second in the time line if sin(0) is ((pi^2 + i*pi^2)^2,0) is now.
+If we are standing facing the real numbers, we see all real numbers moving before us. Time is moving forward and we are moving backward through it.
+
+E**(I*cmath.tan(cmath.cos((v**2 + I*theRest**2)**(1/2)) + I*cmath.sin(theRest**2 + I*v**2)**(1/2))**(1/2)) == E**(I*(cos(pi/4)+I*sin(pi/4)))

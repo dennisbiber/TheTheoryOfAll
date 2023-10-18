@@ -191,20 +191,34 @@ def secondOrder(x, y):
 # def thridOrder(x, y):
 #     return x
 
+class Magnitudes:
+    def __init__(self):
+        everything = TheMathFunction()
+        self.All = everything.returnAll()
+    def two(self):
+        return firstOrder(self.All[1][0][0], self.All[1][0][1])[-1]
+    
+    def twoCubed(self):
+        if self.two()**3 == firstOrder(self.All[0][0][0], self.All[0][0][1])[0]:
+            return firstOrder(self.All[0][0][0], self.All[0][0][1])[0]
 
-everything = TheMathFunction()
-All = everything.returnAll()
-print(firstOrder(All[0][0][0], All[0][0][1]))
-print(firstOrder(All[0][1][0], All[0][1][1]))
-print(firstOrder(All[1][0][0], All[1][0][1]))
-print(firstOrder(All[1][1][0], All[1][1][1]))
-print(firstOrder(All[2][0][0], All[2][0][1]))
-print(firstOrder(All[2][1][0], All[2][1][1]))
-print(firstOrder(All[3][0][0], All[3][0][1]))
-print(firstOrder(All[3][1][0], All[3][1][1]))
-print(firstOrder(All[4][0][0], All[4][0][1]))
-print(firstOrder(All[4][1][0], All[4][1][1]))
-print(firstOrder(All[5][0][0], All[5][0][1]))
-print(firstOrder(All[5][1][0], All[5][1][1]))
+
+# everything = TheMathFunction()
+# All = everything.returnAll()
+# half = firstOrder(All[0][0][0], All[0][0][1])[-1]
+# miunsHalf = firstOrder(All[0][1][0], All[0][1][1])[-1]
+# print(miunsHalf)
+# print(firstOrder(All[0][0][0], All[0][0][1]))
+# print(firstOrder(All[0][1][0], All[0][1][1]))
+# print(firstOrder(All[1][0][0], All[1][0][1]))
+# print(firstOrder(All[1][1][0], All[1][1][1]))
+# print(firstOrder(All[2][0][0], All[2][0][1]))
+# print(firstOrder(All[2][1][0], All[2][1][1]))
+# print(firstOrder(All[3][0][0], All[3][0][1]))
+# print(firstOrder(All[3][1][0], All[3][1][1]))
+# print(firstOrder(All[4][0][0], All[4][0][1]))
+# print(firstOrder(All[4][1][0], All[4][1][1]))
+# print(firstOrder(All[5][0][0], All[5][0][1]))
+# print(firstOrder(All[5][1][0], All[5][1][1]))
 
 

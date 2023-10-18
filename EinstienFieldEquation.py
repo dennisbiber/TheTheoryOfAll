@@ -1,5 +1,6 @@
-from sympy import E, I, pi, cos, tan, sin
+from sympy import E, I, pi, cos, tan, sin, Matrix
 import cmath
+from units import Units
 # o/pi^2 + i*pi^2 (complex zero) or infinitiy. What ever helps you picture it. (Imagination)
 # -1/1 = Magntiude (complex space)
 # pi = positive energy
@@ -65,12 +66,35 @@ class SpaceTensor:
 
     def getMinimumValue(self):
         return self._negativeI
+import sympy as sp 
+T = Matrix([
+    [sp.Symbol('energy_density'), 0, 0, 0],
+    [0, 0, 0, 0],
+    [0, 0, 0, 0],
+    [0, 0, 0, 0]
+])
 
 
 spaceTensor = SpaceTensor(timeDireciton=-1)
 allThings = spaceTensor.getMaxValues()
 noThings = spaceTensor.getMinimumValue()
-print(allThings)
-print(noThings)
-if allThings == noThings:
+spaceTensor = SpaceTensor(timeDireciton=1)
+allThingsForward = spaceTensor.getMaxValues()
+noThingsForward = spaceTensor.getMinimumValue()
+units = Units()
+gamma = units.LorentzFactor()
+BiberConjecutreTensor = units.GravityCoefficient() / (allThingsForward) * Matrix([
+    [T[0, 0] - 0.5 * sp.Trace(T), 0, 0, 0],
+    [0, 0, 0, 0],
+    [0, 0, 0, 0],
+    [0, 0, 0, 0]
+])
+
+Einstein_tensor = 1 / (gamma)
+lhs = BiberConjecutreTensor[0, 0] / allThingsForward
+print(lhs)
+print(Einstein_tensor)
+if allThings == noThings and allThingsForward == noThingsForward:
   print("Yes")
+  print(allThings)
+  print(noThings)

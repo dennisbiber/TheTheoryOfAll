@@ -113,3 +113,5 @@ This suggest the coordinate (cos(2*I*pi), cos(-2pi)) is the next second in the t
 If we are standing facing the real numbers, we see all real numbers moving before us. Time is moving forward and we are moving backward through it.
 
 E**(I*cmath.tan(cmath.cos((v**2 + I*theRest**2)**(1/2)) + I*cmath.sin(theRest**2 + I*v**2)**(1/2))**(1/2)) == E**(I*(cos(pi/4)+I*sin(pi/4)))
+
+Lorentz Factor = pi**(-2)

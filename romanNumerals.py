@@ -51,7 +51,7 @@ def infinity_real():
     return  E**sE + tE
 
 def infinity_Light():
-    return  E**sE  tE
+    return  E**sE
 
 def infinity_E():
     return
